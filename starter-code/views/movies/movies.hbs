@@ -1,0 +1,11 @@
+<h2>Liste des films</h2>
+
+<ul>
+  {{#each movies}}
+  <li>   
+   <a href="/movies/movie-details">{{ this.title }} </a>   
+  </li>
+  {{/each}}
+</ul>
+
+<a href="/movies/new">Ajouter un film</a>
