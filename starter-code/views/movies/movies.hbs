@@ -3,8 +3,12 @@
 <ul>
   {{#each movies}}
   <li>   
-   <a href="/movies/movie-details">{{ this.title }} </a>   
+   <a href="/movies/{{_id}}">{{ this.title }} </a>   
   </li>
+  <a href="/movies/edit?movie_id={{_id}}">EDIT</a> {{!lien vers le formulaire d'edition}}
+  <form action="/movies/delete?movie_id={{_id}}" method="POST">
+      <button>DELETE</button>
+    </form>
   {{/each}}
 </ul>
 
